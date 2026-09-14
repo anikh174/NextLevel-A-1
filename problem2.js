@@ -28,7 +28,7 @@ function getDayType(data){
         case "tuesday":
         case "wednesday":
         case "thursday":
-        return "Work Day";
+        return "Working Day";
         break;
 
         default:
