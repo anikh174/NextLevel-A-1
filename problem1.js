@@ -21,7 +21,7 @@
 
 function describeValue(value) {
   const type = typeof value;
-  const value = value ? "truthy" : "falsy";
-  return `${type} | ${value}`;
+  const values = value ? "truthy" : "falsy";
+  return `${type} | ${values}`;
 }
 console.log(describeValue(NaN))

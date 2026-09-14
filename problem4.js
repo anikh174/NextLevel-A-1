@@ -19,6 +19,24 @@
 // getCngFare(5, true, 10)	138	115 + 20%
 // Hint: build the fare step by step in a let variable, then apply the night charge at the very end.
 
-function getCngFare(distance, isNight, waitingMinutes){
-    
+function getCngFare(distance, isNight = false, waitingMinutes = 0){
+    let fare = 50;
+    let waitingCost = waitingMinutes*2;
+    let distanceCost = (distance - 2)*15;
+    let distanceWaiting = distanceCost + waitingCost;
+    let nightCost = distanceCost + 10;
+
+    // if(distance <= 2){
+    //     return fare;
+    // }
+    if(distance >= 2 && isNight){
+        return fare += nightCost;
+    }
+    if(distance >= 2 && waitingMinutes){
+        return fare += distanceWaiting;
+    }
+    if(distance >= 2){
+        return fare += distanceCost;
+    }
 }
+console.log(getCngFare(5, true))

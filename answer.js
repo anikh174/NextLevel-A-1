@@ -1,8 +1,8 @@
 // pb-1 ans
 function describeValue(value) {
   const type = typeof value;
-  const value = value ? "truthy" : "falsy";
-  return `${type} | ${value}`;
+  const values = value ? "truthy" : "falsy";
+  return `${type} | ${values}`;
 }
 
 // pb-2 ans
@@ -19,7 +19,7 @@ function getDayType(data){
         case "tuesday":
         case "wednesday":
         case "thursday":
-        return "Work Day";
+        return "Working Day";
         break;
 
         default:
